@@ -1,0 +1,65 @@
+<?php
+    session_start();
+    
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Regrestration form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <form action="register.php" method="post">
+        <div class="wrapper">
+            <div class="feedback">
+                <div class="title">
+                    <legend>Regrestration</legend>
+                </div>
+                <div class="feedback_form">
+                    <div class="items">
+                        <label for="name" class="label">name</label>
+                        <input type="text" class="input" id="name" onblur="myFunction()">
+                    </div>
+                    <script>
+                        function myFunction() {
+                            var x = document.getElementById("name");
+                            x.value = x.value.toUpperCase();
+                        }
+                    </script>
+                    <div class="items">
+                        <label for="email" class="label">email</label>
+                        <input id="email" type="text" class="input">
+                    </div>
+                    <div class="items">
+                        <label for="subject" class="label">Password</label>
+                        <input type="password" class="input" id="name">
+                    </div>
+                    <div class="items1">
+                        <label for="vehical" class="label">vehical</label>
+                        <input type="checkbox" id="v1" class="check-box" value="Bike">
+                        <label for="v1" class="check-box">Bike</label>
+                        <input type="checkbox" class="check-box" id="v2" value="Car">
+                        <label for="v1" class="check-box">Car</label>
+                    </div>
+                    <div class="items2">
+                        <label for="gender" class="label">Gender</label>
+                        <input type="radio" id="male" class="rad" name="gender" value="male">
+                        <label for="male" class="rad">Male</label><br>
+                        <input type="radio" id="female" class="rad" name="gender" value="female">
+                        <label for="female" class="rad">Female</label><br>
+                    </div>
+                    <div class="items">
+                        <label for="Name" class="label">Message</label>
+                        <textarea id="msg" class="text-area"></textarea>
+                    </div>
+                </div>
+                <div class="btn">Send</div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
